@@ -16,3 +16,4 @@ SpeedFast/
 │    └── ui/
 │         └── Main.java
 └── README.md
+Se ejecuta desde carpeta ui 
