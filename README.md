@@ -17,3 +17,5 @@ SpeedFast/
 │         └── Main.java
 └── README.md
 Se ejecuta desde carpeta ui 
+
+Semana 2... ocupa las mismas clases y se ejecuta de la misma forma.

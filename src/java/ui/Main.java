@@ -4,23 +4,18 @@ import model.*;
 
 public class Main {
     public static void main(String[] args) {
-        Pedido p1 = new PedidoComida(1, "Av. Principal 123");
-        Pedido p2 = new PedidoEncomienda(2, "Calle Secundaria 456", 5.0, true);
-        Pedido p3 = new PedidoExpress(3, "Av. Libertad 789");
+        Pedido comida = new PedidoComida(1, "Av. Principal 123", 3);
+        Pedido encomienda = new PedidoEncomienda(2, "Calle Secundaria 456", 8);
+        Pedido express = new PedidoExpress(3, "Av. Libertad 789", 6);
 
-        System.out.println("=== PRUEBA DE POLIMORFISMO Y SOBRECARGA ===");
+        System.out.println("=== RESUMEN DE PEDIDOS ===");
+        comida.mostrarResumen();
+        System.out.println("Tiempo estimado: " + comida.calcularTiempoEntrega() + " min\n");
 
-        // Versión sobrescrita
-        p1.asignarRepartidor();
-        p2.asignarRepartidor();
-        p3.asignarRepartidor();
+        encomienda.mostrarResumen();
+        System.out.println("Tiempo estimado: " + encomienda.calcularTiempoEntrega() + " min\n");
 
-        System.out.println("\n--- Usando sobrecarga con nombre ---");
-
-        // Versión sobrecargada
-        p1.asignarRepartidor("Carlos");
-        p2.asignarRepartidor("María");
-        p3.asignarRepartidor("José");
+        express.mostrarResumen();
+        System.out.println("Tiempo estimado: " + express.calcularTiempoEntrega() + " min\n");
     }
 }
-
